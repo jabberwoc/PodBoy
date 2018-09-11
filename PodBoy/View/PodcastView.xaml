@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="PodBoy.View.PodcastView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:PodBoy.ViewModel"
+             xmlns:control="clr-namespace:PodBoy.Resource.Control"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:view="clr-namespace:PodBoy.View"
+             xmlns:behavior="clr-namespace:PodBoy.Behavior"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance d:Type=viewModel:PodcastViewModel, IsDesignTimeCreatable=False}"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource WindowBackground}">
+
+        <Grid x:Name="OpenUrlOverlay" Grid.Column="0"
+              Panel.ZIndex="100" Style="{StaticResource OverlayGridStyle}">
+            <view:OpenUrlView x:Name="OpenUrlDialog" />
+        </Grid>
+
+        <Grid x:Name="ColumnGrid" Grid.Column="0" Background="Transparent" Margin="0,0,3,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="ChannelColumn" Width="200*" MinWidth="180" />
+                <ColumnDefinition Width="3" />
+                <ColumnDefinition x:Name="EpisodeColumn" Width="980*" MinWidth="400" />
+                <ColumnDefinition Width="3" />
+                <ColumnDefinition x:Name="DetailColumn" Width="0*" />
+            </Grid.ColumnDefinitions>
+
+            <GridSplitter Grid.Column="1" Grid.RowSpan="2" Width="3" HorizontalAlignment="Stretch" />
+
+            <GridSplitter x:Name="DetailSplitter" Grid.Column="3" Grid.RowSpan="2" Grid.Row="0" Width="3"
+                          HorizontalAlignment="Stretch" />
+
+            <Grid x:Name="ChannelsBusyOverlay" Grid.Column="0" Grid.Row="1"
+                  Panel.ZIndex="101"
+                  Style="{StaticResource OverlayGridStyle}">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="1" />
+                </Grid.Background>
+
+                <control:BusyWheel x:Name="ChannelsBusyWheel" Width="40" Height="40" />
+            </Grid>
+
+            <Grid x:Name="EpisodesBusyOverlay" Grid.Column="2" Grid.Row="1"
+                  Panel.ZIndex="101"
+                  Style="{StaticResource OverlayGridStyle}">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="1" />
+                </Grid.Background>
+                <control:BusyWheel x:Name="EpisodesBusyWheel" Width="40" Height="40" />
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="0" Background="White"
+                  HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="ChannelsHeader" Text="Channels" Grid.Column="0"
+                           Style="{DynamicResource HeaderStyle}" />
+
+
+                <Button x:Name="AddChannelButton" Template="{DynamicResource PlusIconSelectorTemplate}"
+                        Style="{DynamicResource ChannelHeaderIconStyle}" Grid.Column="1"
+                        ToolTip="add channel" />
+
+                <Button x:Name="RemoveFilterButton" Template="{DynamicResource FilterIconTemplate}"
+                        Style="{DynamicResource ChannelHeaderIconStyle}" Grid.Column="2"
+                        ToolTip="remove filter" />
+
+                <Button x:Name="Update" Template="{DynamicResource UpdateIconTemplate}"
+                        Style="{DynamicResource ChannelHeaderIconStyle}"
+                        Grid.Column="3"
+                        ToolTip="update channels" />
+            </Grid>
+
+            <!-- Channels -->
+            <ListBox x:Name="Channels" MinWidth="180" Grid.Row="1" Grid.Column="0" AllowDrop="True"
+                     HorizontalContentAlignment="Stretch" Style="{DynamicResource ChannelListStyle}">
+                <i:Interaction.Behaviors>
+                    <behavior:ChannelListDragDropBehavior x:Name="DragDropBehavior" IsEnabled="True" />
+                </i:Interaction.Behaviors>
+            </ListBox>
+
+            <!-- Channels placeholder -->
+            <ContentControl x:Name="ChannelsPlaceholder" Grid.Column="0" Grid.Row="1"
+                            Visibility="{Binding ElementName=Channels,Path=Items.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"
+                            Template="{DynamicResource ChannelPlaceholderTemplate}" />
+
+
+            <Grid Background="White" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="EpisodesHeader" Grid.Column="0" Text="Episodes"
+                           Style="{DynamicResource HeaderStyle}" />
+                <ToggleButton x:Name="SearchIcon" Style="{DynamicResource SearchButtonStyle}"
+                              Grid.Column="1"
+                              Height="16" />
+                <TextBox x:Name="FilterTextBox" Grid.Column="2" Width="200"
+                         Style="{DynamicResource EpisodeFilterTextBoxStyle}" />
+
+                <!-- Sort episodes -->
+                <!-- TODO -->
+                <StackPanel Orientation="Horizontal" Grid.Column="2"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center">
+                    <ToggleButton x:Name="SortDirection" Style="{StaticResource SortOrderButtonStyle}" Height="14" />
+                    <ComboBox x:Name="EpisodeOrder"
+                              Style="{DynamicResource EpisodeSortStyle}" />
+                </StackPanel>
+            </Grid>
+
+            <!-- Episodes -->
+            <ListBox x:Name="Episodes" Grid.Column="2" Grid.Row="1" MinWidth="400"
+                     HorizontalContentAlignment="Stretch" Style="{DynamicResource EpisodeListStyle}" />
+
+
+            <!-- Episodes placeholder -->
+            <ContentControl x:Name="EpisodesPlaceholder" Grid.Column="2" Grid.Row="1"
+                            Template="{DynamicResource EpisodePlaceholderTemplate}" />
+
+            <ToggleButton x:Name="ShowDetailButton" Grid.Column="2" Grid.Row="0"
+                          Style="{StaticResource DetailButtonStyle}" />
+
+            <view:DetailView x:Name="Detail" Background="White" Grid.Column="4" Grid.Row="0" Grid.RowSpan="2"
+                             Style="{DynamicResource DetailContainerStyle}" />
+
+
+            <i:Interaction.Behaviors>
+                <behavior:ColumnGridSplitterBehavior x:Name="ColumnGridBehavior"
+                                                     ItemsColumn="{Binding ElementName=EpisodeColumn}"
+                                                     DetailColumn="{Binding ElementName=DetailColumn}" />
+            </i:Interaction.Behaviors>
+        </Grid>
+
+    </Grid>
+</UserControl>

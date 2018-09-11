@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converter="clr-namespace:PodBoy.Resource.Converter">
+    <converter:HtmlToFlowDocConverter x:Key="HtmlToFlowDocConverter" />
+    <converter:HumanizeConverter x:Key="HumanizeConverter" />
+    <converter:BooleanOrConverter x:Key="BooleanOrConverter" />
+
+    <converter:BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" True="Collapsed" False="Visible" />
+    <converter:BooleanToVisibilityConverter x:Key="InverseBooleanToVisibilityConverter" True="Visible"
+                                            False="Collapsed" />
+    <converter:IsGreaterThanZero x:Key="IsGreaterThanZero" />
+    <converter:NegatingConverter x:Key="NegatingConverter" />
+    <converter:NotificationColorConverter x:Key="NotificationColorConverter" />
+    <GridLengthConverter x:Key="GridLengthConverter" />
+</ResourceDictionary>

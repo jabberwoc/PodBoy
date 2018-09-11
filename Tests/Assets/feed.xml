@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <atom:link href="http://feedtest.local" rel="self" type="application/rss+xml" />
+    <title>Test Channel</title>
+    <pubDate>Mon, 21 Sep 2015 09:08:10 +0000</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2015 10:17:17 +0000</lastBuildDate>
+    <link>http://feedtest.local/</link>
+    <language>en</language>
+    <copyright><![CDATA[]]></copyright>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <managingEditor>podcast@futilitycloset.com (podcast@futilitycloset.com)</managingEditor>
+    <description><![CDATA[A celebration of the quirky and the curious, the thought-provoking and the simply amusing. Each episode explores unusual historical events and other curiosities and features a lateral thinking puzzle that you can try to solve along with us.]]></description>
+    <image>
+      <url>http://feedtest.local/podcast.png</url>
+      <title>Futility Closet</title>
+      <link><![CDATA[http://www.futilitycloset.com/]]></link>
+    </image>
+    <itunes:author>Sebastian Stöcker</itunes:author>
+    <itunes:category text="test" />
+    <itunes:image
+      href="http://feedtest.local/podcast.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:owner>
+      <itunes:name><![CDATA[Sebastian Stöcker]]></itunes:name>
+      <itunes:email>podcast@feedtest.local</itunes:email>
+    </itunes:owner>
+    <itunes:summary><![CDATA[This is a test channel.]]></itunes:summary>
+    <itunes:subtitle><![CDATA[Really.]]></itunes:subtitle>
+    <item>
+      <title>Episode 3</title>
+      <pubDate>Mon, 21 Sep 2015 09:08:10 +0000</pubDate>
+      <guid isPermaLink="false"><![CDATA[62092F5BA6B1412A882B8B7E3B63DB2C]]></guid>
+      <link><![CDATA[http://feedtest.local/episode3]]></link>
+      <itunes:image href="http://feedtest.local/episode3.png" />
+      <description><![CDATA[<p>As I said. This is a test. Here's the description.</p>]]></description>
+      <enclosure length="32653317" type="audio/mpeg" url="http://feedtest.local/episode3.mp3" />
+      <itunes:duration>42:00</itunes:duration>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:keywords />
+      <itunes:subtitle><![CDATA[A subtitle.]]></itunes:subtitle>
+    </item>
+    <item>
+      <title>Episode 2</title>
+      <pubDate>Tue, 15 Sep 2015 09:08:10 +0000</pubDate>
+      <guid isPermaLink="false"><![CDATA[62092F5BA6B1412A882B8B7E3B63DB2C]]></guid>
+      <link><![CDATA[http://feedtest.local/episode2]]></link>
+      <itunes:image href="http://feedtest.local/episode2.png" />
+      <description><![CDATA[<p>As I said. This is a test. Here's the description.</p>]]></description>
+      <enclosure length="32653317" type="audio/mpeg" url="http://feedtest.local/episode2.mp3" />
+      <itunes:duration>42:00</itunes:duration>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:keywords />
+      <itunes:subtitle><![CDATA[A subtitle.]]></itunes:subtitle>
+    </item>
+    <item>
+      <title>Episode 1</title>
+      <pubDate>Wed, 09 Sep 2015 09:08:10 +0000</pubDate>
+      <guid isPermaLink="false"><![CDATA[62092F5BA6B1412A882B8B7E3B63DB2C]]></guid>
+      <link><![CDATA[http://feedtest.local/episode1]]></link>
+      <itunes:image href="http://feedtest.local/episode1.png" />
+      <description><![CDATA[<p>As I said. This is a test. Here's the description.</p>]]></description>
+      <enclosure length="32653317" type="audio/mpeg" url="http://feedtest.local/episode1.mp3" />
+      <itunes:duration>42:00</itunes:duration>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:keywords />
+      <itunes:subtitle><![CDATA[A subtitle.]]></itunes:subtitle>
+    </item>
+  </channel>
+</rss>

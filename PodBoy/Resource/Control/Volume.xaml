@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="PodBoy.Resource.Control.Volume"
+             x:Name="VolumeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300" Background="Transparent">
+    <Grid>
+        <Button x:Name="VolumeIndicator" Template="{DynamicResource VolumeIconTemplate}" VerticalAlignment="Stretch" />
+        <Popup x:Name="Popup" PlacementTarget="{Binding ElementName=VolumeIndicator}" Placement="Center"
+               AllowsTransparency="True"
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Border x:Name="SliderBorder" Background="White" CornerRadius="3" BorderThickness="1"
+                    BorderBrush="{DynamicResource DarkerGrayBrush}">
+                <Slider x:Name="Slider" Maximum="1" Minimum="0" Style="{DynamicResource ModernSlider}"
+                        Value="{Binding ElementName=VolumeControl,Path=CurrentVolume}" Margin="5"
+                        Width="100" />
+            </Border>
+        </Popup>
+    </Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+
+    <!-- Common Colors -->
+    <Color x:Key="PastellRed">#db5858</Color>
+    <Color x:Key="Beige">#eee7cd</Color>
+    <Color x:Key="LightBeige">#f8f5db</Color>
+    <Color x:Key="PastellGreen">#407c78</Color>
+    <Color x:Key="DarkGray">#666666</Color>
+    <Color x:Key="DarkerGray">#b1b1b1</Color>
+    <Color x:Key="Blue">#3899d6</Color>
+    <Color x:Key="TransparentBlue">#663899d6</Color>
+    <Color x:Key="Gray">#e7e7e8</Color>
+    <Color x:Key="LightGray">#eeeef2</Color>
+    <Color x:Key="BlueGreen">#3b7c91</Color>
+    <Color x:Key="AccentColor">#3b7c91</Color>
+    <Color x:Key="LogoGray">#929292</Color><!-- unused -->
+
+    <Color x:Key="WindowBackgroundColor">#eeeef2</Color>
+
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="PastellRedBrush" Color="{StaticResource PastellRed}" po:Freeze="True" />
+    <SolidColorBrush x:Key="BeigeBrush" Color="{StaticResource Beige}" po:Freeze="True" />
+    <SolidColorBrush x:Key="LightBeigeBrush" Color="{StaticResource LightBeige}" po:Freeze="True" />
+    <SolidColorBrush x:Key="PastellGreenBrush" Color="{StaticResource PastellGreen}" po:Freeze="True" />
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{StaticResource DarkGray}" po:Freeze="True" />
+    <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource Gray}" po:Freeze="True" />
+    <SolidColorBrush x:Key="DarkerGrayBrush" Color="{StaticResource DarkerGray}" po:Freeze="True" />
+    <SolidColorBrush x:Key="CirclesColorBrush" Color="{StaticResource AccentColor}" po:Freeze="True" />
+    <SolidColorBrush x:Key="WhiteColorBrush" Color="White" po:Freeze="True" />
+    <SolidColorBrush x:Key="DarkBackgroundColorBrush" Color="{StaticResource Gray}" po:Freeze="True" />
+    <SolidColorBrush x:Key="BlueColorBrush" Color="{StaticResource Blue}" po:Freeze="True" />
+    <SolidColorBrush x:Key="TransparentBlueColorBrush" Color="{StaticResource TransparentBlue}" po:Freeze="True" />
+    <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}" po:Freeze="True" />
+    <SolidColorBrush x:Key="BlueGreenBrush" Color="{StaticResource BlueGreen}" po:Freeze="True" />
+    <SolidColorBrush x:Key="AccentColorBrush" Color="{StaticResource AccentColor}" po:Freeze="True" />
+
+    <!-- notifications -->
+    <SolidColorBrush x:Key="NotificationColorInfo" Color="#66b57f" po:Freeze="True" />
+    <SolidColorBrush x:Key="NotificationColorWarning" Color="#eea84a" po:Freeze="True" />
+    <SolidColorBrush x:Key="NotificationColorError" Color="#e74d38" po:Freeze="True" />
+
+</ResourceDictionary>

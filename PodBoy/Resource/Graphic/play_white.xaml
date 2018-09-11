@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+    <Canvas Name="svg3811" Width="50" Height="50">
+        <Canvas.Resources /><!--Unknown tag: sodipodi:namedview--><!--Unknown tag: metadata--><Canvas Name="layer1">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="-350" Y="-507.36218" />
+            </Canvas.RenderTransform>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path4065" Fill="#FFFFFFFF">
+                <Path.Data>
+                    <PathGeometry Figures="m 367.09923 519.86218 0 25 20.83333 -12.5 z" FillRule="NonZero" />
+                </Path.Data>
+            </Path>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path403651" StrokeThickness="5"
+                  Stroke="#FFFFFFFF" StrokeMiterLimit="4" Opacity="0.97000002">
+                <Path.Data>
+                    <PathGeometry
+                        Figures="m 150 122.5 c 0 12.42641 -10.07359 22.5 -22.5 22.5 -12.42641 0 -22.5 -10.07359 -22.5 -22.5 0 -12.42641 10.07359 -22.5 22.5 -22.5 12.42641 0 22.5 10.07359 22.5 22.5 z"
+                        FillRule="NonZero" />
+                </Path.Data>
+                <Path.RenderTransform>
+                    <TranslateTransform X="247.5" Y="409.86218" />
+                </Path.RenderTransform>
+            </Path>
+        </Canvas>
+    </Canvas>
+</Viewbox>

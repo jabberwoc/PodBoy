@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+    <Canvas Name="svg3861" Width="50" Height="50">
+        <Canvas.Resources /><!--Unknown tag: sodipodi:namedview--><!--Unknown tag: metadata--><Canvas Name="layer1">
+            <Canvas.RenderTransform>
+                <TranslateTransform X="-100.71429" Y="-204.50504" />
+            </Canvas.RenderTransform>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path40365117" StrokeThickness="5"
+                  Stroke="#FF3B7C91" StrokeMiterLimit="4" Opacity="0.97000002">
+                <Path.Data>
+                    <PathGeometry
+                        Figures="m 150 122.5 c 0 12.42641 -10.07359 22.5 -22.5 22.5 -12.42641 0 -22.5 -10.07359 -22.5 -22.5 0 -12.42641 10.07359 -22.5 22.5 -22.5 12.42641 0 22.5 10.07359 22.5 22.5 z"
+                        FillRule="NonZero" />
+                </Path.Data>
+                <Path.RenderTransform>
+                    <TranslateTransform X="-1.7857143" Y="107.00504" />
+                </Path.RenderTransform>
+            </Path>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path41651" Fill="#FF3B7C91">
+                <Path.Data>
+                    <PathGeometry Figures="m 116.49382 217.73445 0 24.41695 7.18433 0 0 -24.41695 z" FillRule="NonZero" />
+                </Path.Data>
+            </Path>
+            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path416524" Fill="#FF3B7C91">
+                <Path.Data>
+                    <PathGeometry Figures="m 127.60422 217.73445 0 24.41695 7.18433 0 0 -24.41695 z" FillRule="NonZero" />
+                </Path.Data>
+            </Path>
+        </Canvas>
+    </Canvas>
+</Viewbox>
