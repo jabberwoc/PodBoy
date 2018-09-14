@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="assets/podboy_logo.png" alt="Podboy" width="300" />
+  <img src="assets/podboy_logo.png" alt="Podboy" width="100" />
   <br>
   PodBoy
   <br>
